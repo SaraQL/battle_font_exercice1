@@ -1,0 +1,37 @@
+
+.fungal{
+  font-family: 'FungalGX';
+  position: relative;
+  top: 200px ;
+  text-align: center;
+  
+}
+
+
+
+.sixtyhour{
+  font-family: 'sixtyhour';
+  position: relative;
+  top: 251px;
+  text-align: right;
+  transition: rotate 0.5s;
+}
+
+h2{
+  color:blue;
+  font-size:50px;
+  font-variation-settings: "grow" 500, "THCK" 200;
+}
+
+p{
+  color:orangered; 
+  font-size: 60px;
+  font-variation-settings: "SCAN" -53, "BLED" 0;
+  
+}
+
+
+div:hover .sixtyhour {
+  rotate: 1 10 1 90deg;
+}  
+  
