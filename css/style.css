@@ -1,51 +1,126 @@
 
 .fungal{
-  font-family: 'FungalGX';
-  position: relative;
-  top: 200px ;
-  text-align: center;
-  
+  font-family: 'FungalGX';  
 }
+
 
 .sixtyhour{
   font-family: 'sixtyhour';
-  position: relative;
-  top: 251px;
-  text-align: right;
-  transition: rotate 0.5s;
 }
 
-@keyframes couleur {								
+@keyframes typo_fungal {								
   0%{
-    color : yellow; 
+    font-variation-settings: "grow" 0, "THCK" 100; 
+    color : orangered; 
+    transform: rotate(0deg); 
+  }
+
+  50%{
+    font-variation-settings: "grow" 1000, "THCK" 500; 
+    color : yellow;
+    transform: rotate(25deg);
   }
 
   100%{
-    color : blue; 
+    font-variation-settings: "grow" 0, "THCK" 1000; 
+    color : orangered; 
+    transform: rotate(0deg);
   }
 }
 
+@keyframes typo_sixtyhour {								
+  0%{
+    font-variation-settings: "SCAN" 500, "BLED" 200;
+    font-size: 20px; 
+  }
+  
+  50%{
+    font-variation-settings: "SCAN" 250, "BLED" 100;
+    font-size: 60px; 
+  }
+
+  100%{  
+    font-variation-settings: "SCAN" 500, "BLED" 200;
+    font-size: 20px;
+  }
+}
+
+@keyframes box {								
+  0%{
+    height: 100px;
+    width: 100px;
+  }
+  
+  50%{
+    height: 50px; 
+    width: 50px;
+  }
+
+  100%{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+div{
+  animation-name: box;
+  position: relative;
+  top : 800px;
+  left : 400px;
+  box-sizing: border-box;
+  background-color: rgb(230, 194, 128);
+}
+
+div:hover{
+  position: relative;
+  top : 800px;
+  left : 400px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: tomato;
+}
+
+div:hover h2{
+  display: none;
+}
 
 h2{
+  display: block;
   color:blue;
-  font-size:50px;
-  font-variation-settings: "grow" 500, "THCK" 200;
-}
-
-p{
-  color:orangered; 
-  font-size: 60px;
-  font-variation-settings: "SCAN" 100, "BLED" 100;  
-  animation-name: couleur;
+  position: relative;
+  bottom:50px;
+  left : 50px;
+  font-size:60px;
+  animation-name: typo_sixtyhour;
   animation-duration: 5s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-fill-mode: forwards;
-  
 }
 
 
-div:hover .sixtyhour {
-  rotate: 1 10 1 90deg;
-}  
-  
+#centre{
+  font-size: 60px; 
+  position: absolute;
+  top: 350px ;
+  left: 100px;
+  text-align: center;
+  animation-name: typo_fungal;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+#gauche{
+  font-size: 60px; 
+  position: absolute;
+  top: 100px; 
+  left:60px;
+  animation-name: typo_fungal;
+  animation-duration: 5s;
+  animation-iteration-count: 100;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
